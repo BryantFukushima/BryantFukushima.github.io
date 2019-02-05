@@ -1,0 +1,47 @@
+// _project.scss
+
+.project {
+    margin: 4rem 0;
+    display: flex;
+
+    &-text {
+        flex-grow: 0;
+        align-self: center;
+        width: 25%;
+        padding: 8rem;
+
+        p:nth-of-type(1) {
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        &__right {
+            order: 2;
+        }
+    }
+
+    &-links {
+        margin-top: 1rem;
+
+        a {
+            color: $primary-color;
+        }
+    }
+
+    &-img {
+        min-height: 300px;
+        flex-grow: 3;
+        background-color: $primary-color;
+
+        &__left {
+            order: 1;
+            -webkit-clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%)
+        }
+
+        &__right {
+            -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%)
+        }
+    }
+}

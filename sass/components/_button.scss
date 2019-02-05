@@ -1,0 +1,30 @@
+// _button.scss
+
+.btn-primary {
+    &, &:link, &:visited {
+        color: $primary-color;
+        text-decoration: none;
+        padding: 1rem 3.5rem;
+        display: inline-block;
+        border-radius: 10rem;
+        border: 1px solid $primary-color;
+        transition: all .2s;
+        position: relative;
+        font-size: $default-font-size;
+    }
+    &:hover,
+    &:focus {
+        background-color: $primary-color;
+        outline: none;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 5px rgba($primary-black,.2);
+        color: $primary-white;
+    }
+    &:active {
+        background-color: $primary-color;
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: inset 0 5px 5px rgba($primary-black,.5);
+        color: $primary-white;
+    }
+}
