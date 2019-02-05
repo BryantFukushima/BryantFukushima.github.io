@@ -142,6 +142,8 @@
                 <input class="btn-primary contact-form-button" type="submit" name="submit" value="Send">
             </form>
             <?php
+            ini_set("SMTP", "aspmx.l.google.com");
+            ini_set("sendmail_from", "bmfukushima94@gmail.com");
                 if(isset($_POST['submit']))
                 {
                     $name=$_POST['name'];
