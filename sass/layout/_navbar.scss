@@ -1,0 +1,145 @@
+// _navbar.scss
+
+.navbar {
+    &__check {
+        display: none;
+    }
+
+    &__button {
+        height: 5rem;
+        width: 5rem;
+        position: fixed;
+        top: 2.5rem;
+        right: 4rem;
+        z-index: 2000;
+        cursor: pointer;
+        background-color: $primary-color;
+        border-radius: 50%;
+        transition: all .3s .2s ease-out;
+        animation: rightToLeft .8s linear;
+
+        @include respond(phone) {
+            top: 1.5rem;
+        }
+
+    }
+
+    &__icon {
+        position: relative;
+        margin: 2.5rem 0 0 1rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            border-radius: 20%;
+            background-color: $primary-white;
+            display: inline-block;
+            transition: transform .5s ease-out;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    &__bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        opacity: 0;
+        background-color: rgba(#000, 0.8);
+        z-index: 100;
+    }
+
+    &__nav {
+        height: 100%;
+        width: 0;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: linear-gradient($primary-color, $primary-color-light);
+        z-index: 200;
+        transition: all .5s ease-out;
+
+    }
+
+    &__list {
+        text-align: center;
+        position: relative;
+        top: 15%;
+    }
+
+    &__item {
+        padding-bottom: 4rem;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__links {
+        color: $primary-white;
+        text-decoration: none;
+        font-size: 2.4rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+    }
+
+    &__check:checked~&__bg {
+        opacity: 1;
+        width: 100%;
+    }
+
+    &__check:checked~&__nav {
+        width: 30rem;
+        animation: slideIn 0.2s linear forwards;
+    }
+
+    &__check:not(:checked)~&__nav {
+        width: 0;
+        animation: slideOut 0.5s linear forwards;
+    }
+
+    &__check:checked~&__button {
+        transform: translateX(-20rem);
+        background: none;
+    }
+
+    &__check:checked~&__button &__icon {
+        top: 0;
+        background-color: transparent;
+    }
+
+    &__check:checked~&__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__check:checked~&__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+}

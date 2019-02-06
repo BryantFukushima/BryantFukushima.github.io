@@ -1,0 +1,43 @@
+// _footer.scss
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-image: linear-gradient(to bottom, $primary-color-light,
+        $primary-color);
+    position: relative;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+
+    &-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 14rem;
+        opacity: .1;
+        z-index: 1;
+    }
+
+    &-links {
+        z-index: 100;
+        align-self: flex-end;
+        color: $primary-white;
+
+        a {
+            color: $primary-white;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-copy {
+        color: $primary-white;
+        font-size: 1rem;
+        margin-top: .2rem;
+    }
+}

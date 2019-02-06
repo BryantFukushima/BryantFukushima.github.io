@@ -3,7 +3,7 @@
 @keyframes leftToRight {
     0% {
         opacity: 0;
-        transform: translateX(-10rem);
+        transform: translateX(-30rem);
     }
 
     80% {
@@ -16,14 +16,38 @@
     }
 }
 
+@keyframes leftToRightNH {
+    0% {
+        opacity: 0;
+        transform: translateX(-30rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
 @keyframes rightToLeft {
     0% {
         opacity: 0;
-        transform: translateX(10rem);
+        transform: translateX(30rem);
     }
 
     80% {
         transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes rightToLeftNH {
+    0% {
+        opacity: 0;
+        transform: translateX(30rem);
     }
 
     100% {
@@ -40,4 +64,46 @@
     100% {
         opacity: 1;
     }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(30rem);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(30rem);
+        opacity: 0;
+    }
+}
+
+.project-text-ani {
+    animation: fadeIn .5s .1s linear forwards;
+}
+.project-img-ani {
+    animation: rightToLeft .3s linear forwards;
+}
+.project-img-ani-left {
+    animation: leftToRight .3s linear forwards;
+}
+
+.about-dev-ani {
+    animation: leftToRightNH .3s linear forwards;
+}
+
+.about-des-ani {
+    animation: rightToLeftNH .3s linear forwards;
 }

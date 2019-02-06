@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bryant Fukushima</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,500,600" rel="stylesheet" />
+
+    <!-- Stylesheet Dev-->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <!-- Stylesheet Prod-->
+    <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+
+    <div class="navbar">
+        <input type="checkbox" class="navbar__check" id="nav">
+
+        <div class="navbar__bg">&nbsp;</div>
+
+        <label for="nav" class="navbar__button">
+            <span class="navbar__icon"></span>
+        </label>
+
+        <nav class="navbar__nav">
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="#home" class="navbar__links">HOME</a></li>
+                <li class="navbar__item"><a href="#projects" class="navbar__links">PROJECTS</a></li>
+                <li class="navbar__item"><a href="#about" class="navbar__links">ABOUT</a></li>
+                <li class="navbar__item"><a href="#contact" class="navbar__links">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <a class="brand" href="#home">
+        <img src="assets/imgs/logo-colored.svg" alt="B Logo" />
+        <div class="brand-name">
+            <p class="brand-name__first">Bryant</p>
+            <p class="brand-name__last">Fukushima</p>
+        </div>
+    </a>
+
+    <header class="header">
+        <hr class="line-l">
+        <h1>Aspiring Front-end Developer / Designer</h1>
+        <p>Design to inspire, develop to aid.</p>
+        <a class="btn-primary" href="#projects">See my work -></a>
+        <hr class="line-r">
+        <div class="header-logo">
+            <img src="assets/imgs/logo.svg" alt="Header Logo">
+        </div>
+    </header>
+
+    <div class="summary main-padding">
+        <div class="summary-text">
+            <h2>Hello, I'm Bryant. Nice to meet you.</h2>
+            <p>I recently graduated from the UC Berkeley Full-Stack Web Development Bootcamp in December 2018 logging
+                500+ hours of coding time within 7 months. I’m a quick and enthusiastic learner who stays committed.</p>
+        </div>
+    </div>
+
+
+
+    <div class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <div id="pure-text" class="project-text project-text__left">
+                <h3>The Pure Gear</h3>
+                <p>Wordpress, HTML, JS, CSS, PHP</p>
+                <p>Wordpress custom theme development and design for a sustainable outdoor gear review blog.</p>
+                <div class="project-links">
+                    <a href="https://thepuregear.com/" target="_blank">View Site</a>
+                </div>
+            </div>
+
+            <a id="pure-img" href="https://thepuregear.com/" target="_blank" class="project-img project-img__pure project-img__right">
+
+            </a>
+        </div>
+
+        <div class="project">
+            <div id="surf-text" class="project-text project-text__right">
+                <h3>Surf Scraper</h3>
+                <p>HTML, CSS, JS, Node, Express</p>
+                <p>Conceptual website development and design. Scrapes Surfer.com for featured articles which then
+                    allows users to comment.</p>
+                <div class="project-links">
+                    <a href="https://surf-scraper.herokuapp.com/" target="_blank">View Site</a> |
+                    <a href="https://github.com/BryantFukushima/mongo-scrape" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <a  id="surf-img" href="https://surf-scraper.herokuapp.com/" target="_blank" class="project-img project-img__surf project-img__left">
+
+            </a>
+        </div>
+
+        <div class="project">
+            <div id="gif-text" class="project-text project-text__left">
+                <h3>GifTastic</h3>
+                <p>HTML, CSS, JS</p>
+                <p>Conceptual website development and design. Retrieves movies summaries and related GIFs using OMDB
+                    and Giphy APIs.</p>
+                <div class="project-links">
+                    <a href="https://gifmov-awesome.herokuapp.com/" target="_blank">View Site</a> |
+                    <a href="https://github.com/BryantFukushima/GifTastic" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <a id="gif-img" href="https://gifmov-awesome.herokuapp.com/" target="_blank" class="project-img project-img__gif project-img__right">
+
+            </a>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <h2>About</h2>
+        <div class="about-info">
+            <div id="about-dev" class="about-info__develop">
+                <h3>Developer</h3>
+                <p>I enjoy bringing designs and ideas to life on the web. I love developing applications to aid
+                    user’s lives in any way I can. </p>
+                <p>Dev Technologies and Tools:</p>
+                <p>HTML, CSS/Sass, Javascript, Git, GitHub, and Terminal. Knowledge in the MERN (Mongo, Express, React,
+                    Node) stack.</p>
+            </div>
+        </div>
+
+        <div class="about-info">
+            <div id="about-des" class="about-info__design">
+                <h3>Designer</h3>
+                <p>Geometric simplistic design. I enjoy brand design, web design, and photography.</p>
+                <p>Design Tools:</p>
+                <p>Illustrator, Photoshop, Lightroom, InDesign, AdobeXD, and Pen & Paper.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contact" id="contact">
+        <h2>Say Hi!</h2>
+        <form class="contact-form" action="mailto:bmfukushima94@gmail.com?subject=Hi Bryant" method="POST">
+            <p>Have any questions, comments, or interests in working with me? Hit me up, let's chat!</p>
+            <button class="btn-primary contact-form__button" action="mailto:bmfukushima94@gmail.com?subject=Hi Bryant">
+                Get In Touch
+            </button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <img class="footer-img" src="assets/imgs/logo.svg" alt="Footer Logo">
+        <div class="footer-links">
+            <a href="https://github.com/BryantFukushima" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/bryant-fukushima/" target="_blank">LinkedIn</a> |
+            <a href="assets/imgs/Bryant_Fukushima_Resume.pdf" target="_blank">Resume</a>
+            <p class="footer-copy">Creation by B &copy; twenty-nineteen</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+</body>
+
+</html>

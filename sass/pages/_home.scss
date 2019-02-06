@@ -1,56 +1,12 @@
 // _home.scss
 
-.header {
-    height: 72vh;
-    min-height: 47rem;
-    animation: fadeIn .5s ease-in .2s backwards;
-
-    // background-color: bisque;
-    text-align: center;
-    position: relative;
-
-    h1 {
-        padding: 5rem 5rem 2rem;
-    }
-
-    p {
-        margin-bottom: 8rem;
-        font-size: 2.4rem;
-        font-weight: 200;
-    }
-
-    &-logo {
-        position: absolute;
-        bottom: 5%;
-        width: 100%;
-
-        img {
-            height: 10rem;
-        }
-    }
-
-    hr {
-        border-color: rgba($primary-black, 0.3);
-        border-width: 0.5px;
-    }
-
-    .line-l {
-        margin-left: 0;
-        width: 45%;
-    }
-
-    .line-r {
-        position: absolute;
-        bottom: 30%;
-        right: 0;
-        width: 35%;
-    }
-}
-
 .summary {
     padding: 8rem;
-    background-image: linear-gradient(to bottom, rgba($primary-color, 0.6),
+    background-image: linear-gradient(to bottom, $primary-color-light,
         $primary-color);
+        @include respond(phone) {
+            padding: 8rem 2rem;
+        }
 
     &-text {
         animation: fadeIn .5s ease-in .2s backwards;
@@ -63,16 +19,23 @@
         p {
             color: $primary-white;
             font-size: 1.8rem;
-            margin: 4rem auto 0;
+            margin: auto;
             line-height: 2;
             width: 60%;
             text-align: center;
+            @include respond(phone) {
+                width: 100%;
+            }
         }
     }
 }
 
 .projects {
-    padding: 8rem 0;
+    padding: 8rem 0 0;
+    
+    @include respond(phone) {
+        padding: 4rem 0 0;
+    }
 
     h2 {
         text-align: center;
@@ -87,21 +50,27 @@
     border-top: 1px solid $primary-grey;
     border-bottom: 1px solid $primary-grey;
 
+    @include respond(phone) {
+        padding: 4rem 0;
+    }
+
     h2 {
         text-transform: uppercase;
         margin-bottom: 4rem;
         text-align: center;
+        @include respond(phone) {
+            margin-bottom: 0;
+        }
     }
 
     .about-info:first-of-type {
-        background-image: linear-gradient(-45deg, rgba($primary-color, 0.4),
+        background-image: linear-gradient(-45deg, $primary-color-light,
             $primary-color 80%);
         -webkit-clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
         clip-path: polygon(0 0, 90% 0, 75% 100%, 0 100%);
     }
 
     &-info {
-        width: 55%;
         display: flex;
         align-content: space-between;
         padding: 0 25%;
@@ -117,12 +86,14 @@
         &__develop {
             padding: 4rem 0;
             color: $primary-white;
+            opacity: 0;
         }
 
         &__design {
             align-items: flex-end;
             text-align: right;
-            padding: 4rem 0;
+            padding: 4rem 0 8rem;
+            opacity: 0;
         }
     }
 }
@@ -131,102 +102,33 @@
     text-transform: uppercase;
     z-index: 100;
     background-color: $primary-white;
-    margin: -4rem auto 0;
+    margin: -4rem auto 4rem;
     width: 75%;
     padding: 4rem;
     border: 1.25px solid $primary-black;
     border-radius: 1rem;
     text-align: center;
-    margin-bottom: 4rem;
+    box-shadow: 3px 3px 5px rgba($primary-color, 0.2);
+
+    @include respond(phone) {
+        width: auto;
+        margin: -4rem 4rem 4rem;
+    }
 
     &-form {
-        text-align: center;
-        margin: 4rem auto 0;
-        justify-content: space-evenly;
+        justify-content: center;
 
-        &-info {
-            display: flex;
-            justify-content: center;
-
-            &__person {
-                align-self: center;
-                padding: 0 2rem;
-                width: 50%;
-
-                input {
-                    display: block;
-                    height: 2.8rem;
-                    width: 100%;
-                    font: inherit;
-                    background-color: $primary-white;
-                    border: inset 1px rgba($primary-grey, 0.5);
-                    border-image: none;
-                    border-radius: 3px;
-                }
-
-                input:last-of-type {
-                    margin-top: 2rem;
-                }
-            }
-
-            &__message {
-                width: 50%;
-                padding: 0 2rem;
-
-                textarea {
-                    height: 100%;
-                    width: 100%;
-                    font: inherit;
-                    background-color: $primary-white;
-                    border: inset 1px rgba($primary-grey, 0.5);
-                    border-image: none;
-                    border-radius: 3px;
-                }
-            }
-
-        }
-
-        &-button {
-            margin-top: 4rem;
-        }
-
-    }
-}
-
-.footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: $primary-color;
-    position: relative;
-    height: 12rem;
-    display: flex;
-    justify-content: center;
-    &-img {
-        position: absolute;
-        top: 50%;
-        left:50%;
-        transform: translate(-50%, -50%);
-        height: 14rem;
-        opacity: .1;
-        z-index: 1;
-    }
-
-    &-links {
-        z-index: 100;
-        align-self: flex-end;
-        color: $primary-white;
-        a {
-            color: $primary-white;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
+        p {
+            padding: 0 5rem 2rem;
+            font-size: 1.8rem;
+            align-self: center;
+            text-transform: none;
+            @include respond(phone) {
+                padding: 0 2rem 2rem;
             }
         }
-    }
-    &-copy {
-        color: $primary-white;
-        font-size: 1rem;
-        margin-top: .2rem;
+        &__button {
+            text-transform: uppercase;
+        }
     }
 }
