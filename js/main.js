@@ -46,6 +46,10 @@ $(window).scroll(function() {
             $('#gif-text').addClass("project-text-ani");
             $('#gif-img').addClass("project-img-ani")
         }
+        if (scrollView($('#apex-text'))){
+            $('#apex-text').addClass("project-text-ani");
+            $('#apex-img').addClass("project-img-ani")
+        }
         if (scrollView($('#about-dev'))){
             $('#about-dev').addClass("about-dev-ani")
         }

@@ -319,6 +319,10 @@ h3 {
   background-image: url("../assets/imgs/thepuregear-site.png");
   background-position: top center;
 }
+.project-img__apex {
+  background-image: url("../assets/imgs/apex-site.png");
+  background-position: top center;
+}
 .project-img__surf {
   background-image: url("../assets/imgs/surfscraper-site.png");
   background-position: top center;
