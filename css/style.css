@@ -74,9 +74,28 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-weight: 200;
-  font-size: 1.6rem;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.45;
+  letter-spacing: 0.5px;
   color: #4b4b4b;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: 0.075em;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
 }
 
 @keyframes leftToRight {
@@ -173,7 +192,10 @@ body {
   animation: rightToLeftNH 0.3s linear forwards;
 }
 
-.btn-primary, .btn-primary:link, .btn-primary:visited {
+.btn {
+  margin-top: 2rem;
+}
+.btn, .btn:link, .btn:visited {
   color: #196188;
   text-decoration: none;
   padding: 1rem 3.5rem;
@@ -184,19 +206,38 @@ body {
   position: relative;
   font-size: 1.6rem;
 }
-.btn-primary:hover, .btn-primary:focus {
+.btn:hover, .btn:focus {
   background-color: #196188;
   outline: none;
   transform: translateY(-2px);
   box-shadow: 0 5px 5px rgba(75, 75, 75, 0.2);
   color: #FFF;
+  cursor: pointer;
 }
-.btn-primary:active {
+.btn:active {
   background-color: #196188;
   outline: none;
   transform: translateY(-1px);
   box-shadow: inset 0 5px 5px rgba(75, 75, 75, 0.5);
   color: #FFF;
+}
+.btn__white {
+  border: 1px solid #FFF;
+  color: #FFF;
+  font-weight: 300;
+}
+.btn__white:hover, .btn__white:focus {
+  background-color: #FFF;
+  color: #196188;
+}
+
+.background {
+  height: inherit;
+  padding: 18rem 0 21rem;
+  clip-path: polygon(0 0, 100% 10%, 100% 85%, 0 100%);
+}
+.background__right {
+  background: linear-gradient(to bottom, #196188 40%, #6bb3dd 120%);
 }
 
 .navbar__check {
@@ -207,7 +248,7 @@ body {
   width: 5rem;
   position: fixed;
   top: 2.5rem;
-  right: 4rem;
+  right: 5rem;
   z-index: 2000;
   cursor: pointer;
   background-color: #196188;
@@ -265,7 +306,7 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  background: linear-gradient(#196188, #73acca);
+  background: linear-gradient(#196188, #6bb3dd);
   z-index: 200;
   transition: all 0.5s ease-out;
 }
@@ -337,8 +378,7 @@ body {
 }
 .brand img {
   height: 40px;
-  margin-right: 1rem;
-  stroke: #196188;
+  margin-right: 2rem;
 }
 .brand-name {
   text-transform: uppercase;
@@ -357,7 +397,7 @@ body {
 .footer {
   text-align: center;
   padding: 2rem;
-  background-image: linear-gradient(to bottom, #73acca, #196188);
+  background-image: linear-gradient(to bottom, #6bb3dd, #196188);
   position: relative;
   height: 12rem;
   display: flex;
@@ -388,6 +428,88 @@ body {
   color: #FFF;
   font-size: 1rem;
   margin-top: 0.2rem;
+}
+
+.background-b {
+  height: 35rem;
+  position: absolute;
+  top: 55px;
+  right: 14%;
+  z-index: -100;
+  opacity: 0.1;
+}
+
+.header {
+  height: 100vh;
+  position: relative;
+  margin-top: 5rem;
+  position: relative;
+}
+.header-bg {
+  background: linear-gradient(135deg, #196188 25%, #6bb3dd);
+  clip-path: polygon(0 0, 100% 25%, 100% 75%, 0 100%);
+  height: inherit;
+}
+.header-intro {
+  position: absolute;
+  top: 52%;
+  transform: translateY(-50%);
+  color: #FFF;
+  margin: 0 10rem;
+  width: 50%;
+}
+.header-intro h1 {
+  text-transform: none;
+}
+.header-intro p {
+  font-size: 1.8rem;
+}
+
+.projects {
+  color: #FFF;
+  text-align: center;
+}
+.projects h2 {
+  color: rgba(75, 75, 75, 0.2);
+  font-size: calc(15vw + 1rem);
+  transform: rotate(4deg);
+}
+.projects-project {
+  margin: 8rem 0 10rem;
+  color: #4b4b4b;
+}
+.projects-project h3 {
+  margin-bottom: 0;
+}
+.projects-project p:first-of-type {
+  font-size: 1.2rem;
+}
+.projects-project p {
+  width: 75%;
+  margin: auto;
+}
+.projects-project img {
+  height: 45rem;
+  margin: 5rem 0;
+  box-shadow: 5px 5px 10px rgba(75, 75, 75, 0.2);
+}
+.projects-project-links {
+  margin-top: 2rem;
+}
+.projects-project-links a,
+.projects-project-links span {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #4b4b4b;
+}
+.projects-project-links__color a,
+.projects-project-links__color span {
+  color: #FFF !important;
+}
+.projects-project__color {
+  margin: 0;
+  color: #FFF;
+  text-shadow: 1px 1px 5px rgba(75, 75, 75, 0.5);
 }
 
 .contact {
