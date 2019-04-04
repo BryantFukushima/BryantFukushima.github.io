@@ -40,14 +40,19 @@
     }
 }
 
+.proj-header {
+    color: rgba($primary-black, 0.2);
+    font-size: calc(15vw + 1rem);
+    transform: rotate(5deg);
+    text-transform: uppercase;
+    margin: auto;
+    text-align: center;
+}
+
 .projects {
     color: $primary-white;
     text-align: center;
-    h2 {
-        color: rgba($primary-black, 0.2);
-        font-size: calc(15vw + 1rem);
-        transform: rotate(4deg);
-    }
+    margin-top: -5rem;
     &-project {
         margin: 8rem 0 10rem;
         color: $primary-black;

@@ -465,14 +465,19 @@ h3 {
   font-size: 1.8rem;
 }
 
+.proj-header {
+  color: rgba(75, 75, 75, 0.2);
+  font-size: calc(15vw + 1rem);
+  transform: rotate(5deg);
+  text-transform: uppercase;
+  margin: auto;
+  text-align: center;
+}
+
 .projects {
   color: #FFF;
   text-align: center;
-}
-.projects h2 {
-  color: rgba(75, 75, 75, 0.2);
-  font-size: calc(15vw + 1rem);
-  transform: rotate(4deg);
+  margin-top: -5rem;
 }
 .projects-project {
   margin: 8rem 0 10rem;
