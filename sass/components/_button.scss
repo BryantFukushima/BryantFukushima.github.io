@@ -32,7 +32,9 @@
         color: $primary-white;
     }
 
-    &__white {
+    &__white,
+    &:link,
+    &:visited {
         border: 1px solid $primary-white;
         color: $primary-white;
         font-weight: 300;

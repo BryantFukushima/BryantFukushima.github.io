@@ -223,12 +223,12 @@ h3 {
   box-shadow: inset 0 5px 5px rgba(75, 75, 75, 0.5);
   color: #FFF;
 }
-.btn__white {
+.btn__white, .btn:link, .btn:visited {
   border: 1px solid #FFF;
   color: #FFF;
   font-weight: 300;
 }
-.btn__white:hover, .btn__white:focus {
+.btn__white:hover, .btn__white:focus, .btn:link:hover, .btn:link:focus, .btn:visited:hover, .btn:visited:focus {
   background-color: #FFF;
   color: #196188;
 }
@@ -494,6 +494,7 @@ h3 {
 }
 .projects-project h3 {
   font-size: 2.8rem;
+  margin-bottom: 12rem;
 }
 .projects-project p {
   width: 75%;
@@ -501,8 +502,11 @@ h3 {
 }
 .projects-project img {
   width: 50%;
-  margin: 12rem auto;
+  margin: 6rem auto 6rem;
   box-shadow: 5px 5px 10px rgba(75, 75, 75, 0.2);
+}
+.projects-project p:last-of-type {
+  font-size: 1.4rem;
 }
 .projects-project-links {
   margin-top: 2rem;
