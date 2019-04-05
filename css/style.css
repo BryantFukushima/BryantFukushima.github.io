@@ -74,30 +74,30 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.8rem;
   line-height: 1.45;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.75px;
   color: #4b4b4b;
+  text-shadow: 1px 1px 3px rgba(155, 155, 155, 0.4);
 }
 
 h1 {
-  font-size: 2.4rem;
-  font-weight: 800;
+  font-weight: 400;
   margin-bottom: 2rem;
-  letter-spacing: 0.075em;
+  letter-spacing: 1px;
 }
 
 h2 {
-  font-size: 20rem;
   font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 h3 {
-  font-size: 1.8rem;
   font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 @keyframes leftToRight {
@@ -213,7 +213,7 @@ h3 {
   outline: none;
   transform: translateY(-2px);
   box-shadow: 0 5px 5px rgba(75, 75, 75, 0.2);
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
 }
 .btn:active {
@@ -221,15 +221,15 @@ h3 {
   outline: none;
   transform: translateY(-1px);
   box-shadow: inset 0 5px 5px rgba(75, 75, 75, 0.5);
-  color: #FFF;
+  color: #fff;
 }
 .btn__white, .btn:link, .btn:visited {
-  border: 1px solid #FFF;
-  color: #FFF;
+  border: 1px solid #fff;
+  color: #fff;
   font-weight: 300;
 }
 .btn__white:hover, .btn__white:focus, .btn:link:hover, .btn:link:focus, .btn:visited:hover, .btn:visited:focus {
-  background-color: #FFF;
+  background-color: #fff;
   color: #196188;
 }
 
@@ -238,7 +238,7 @@ h3 {
   padding: 20rem 0 30rem;
   clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
 }
-.background__right {
+.background__color {
   background: linear-gradient(to bottom, #196188 40%, #6bb3dd 120%);
 }
 
@@ -271,7 +271,7 @@ h3 {
   width: 3rem;
   height: 2px;
   border-radius: 20%;
-  background-color: #FFF;
+  background-color: #fff;
   display: inline-block;
   transition: transform 0.5s ease-out;
 }
@@ -324,7 +324,7 @@ h3 {
   transform: scale(1.2);
 }
 .navbar__links {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   font-size: 2.4rem;
   font-weight: 600;
@@ -417,19 +417,25 @@ h3 {
 .footer-links {
   z-index: 100;
   align-self: flex-end;
-  color: #FFF;
+  color: #fff;
 }
 .footer-links a {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
 }
 .footer-links a:hover {
   text-decoration: underline;
 }
 .footer-copy {
-  color: #FFF;
+  color: #fff;
   font-size: 1rem;
   margin-top: 0.2rem;
+}
+
+.row {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .background-b {
@@ -454,37 +460,37 @@ h3 {
 }
 .header-intro {
   position: absolute;
-  top: 52%;
+  top: 50%;
   transform: translateY(-50%);
-  color: #FFF;
+  color: #fff;
   margin: 0 10rem;
   width: 50%;
 }
 .header-intro h1 {
-  text-transform: none;
+  font-size: 7rem;
 }
 .header-intro p {
   font-size: 1.8rem;
 }
 
-.proj-header {
+.heading-project {
   color: rgba(75, 75, 75, 0.1);
   font-size: calc(10vw + 1rem);
   font-weight: 600;
   transform: rotate(3deg);
   margin: 8rem 0 2rem;
   text-align: center;
+  text-shadow: none;
 }
 
 .projects {
-  color: #FFF;
+  color: #fff;
   text-align: center;
-  margin-top: -5rem;
+  margin: -5rem auto 20rem;
 }
 .projects-project {
   margin-bottom: 10rem;
   color: #4b4b4b;
-  text-shadow: 1px 1px 3px rgba(155, 155, 155, 0.4);
 }
 .projects-project-number {
   margin-bottom: 0;
@@ -519,17 +525,60 @@ h3 {
 }
 .projects-project-links__color a,
 .projects-project-links__color span {
-  color: #FFF !important;
+  color: #fff !important;
 }
 .projects-project__color {
   margin: 0;
-  color: #FFF;
+  color: #fff;
+}
+
+.heading-about {
+  text-align: center;
+}
+.heading-about h2 {
+  display: inline;
+  font-size: 2.8rem;
+  padding: 1rem 4rem;
+  border-bottom: 1px solid #4b4b4b;
+}
+
+.about {
+  background: linear-gradient(to bottom, #196188 40%, #6bb3dd 120%);
+  color: #fff;
+  margin: 2rem 0;
+  padding: 5rem;
+  font-weight: 400;
+  text-align: center;
+  clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 100%, 50% 90%, 0 100%);
+}
+.about p {
+  letter-spacing: 0.5px;
+}
+.about-skill {
+  flex: 1;
+  margin: 4rem 5rem 0;
+}
+.about-skill h3 {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+.about-tools {
+  flex: 1;
+  margin: 4rem 5rem 4rem;
+}
+.about-tools span {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.about-tools p {
+  margin-top: 2rem;
 }
 
 .contact {
   text-transform: uppercase;
   z-index: 100;
-  background-color: #FFF;
+  background-color: #fff;
   margin: -4rem auto 4rem;
   width: 75%;
   padding: 4rem;

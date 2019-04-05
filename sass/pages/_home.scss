@@ -26,13 +26,14 @@
 
     &-intro {
         position: absolute;
-        top: 52%;
+        top: 50%;
         transform: translateY(-50%);
         color: $primary-white;
         margin: 0 10rem;
         width: 50%;
         h1 {
-            text-transform: none;
+            // text-transform: uppercase;
+            font-size: 7rem;
         }
         p {
             font-size: 1.8rem;
@@ -40,23 +41,23 @@
     }
 }
 
-.proj-header {
+.heading-project {
     color: rgba($primary-black, 0.1);
     font-size: calc(10vw + 1rem);
     font-weight: 600;
     transform: rotate(3deg);
     margin: 8rem 0 2rem;
     text-align: center;
+    text-shadow: none;
 }
 
 .projects {
     color: $primary-white;
     text-align: center;
-    margin-top: -5rem;
+    margin: -5rem auto 20rem;
     &-project {
         margin-bottom: 10rem;
         color: $primary-black;
-        text-shadow: 1px 1px 3px rgba($primary-grey, .4);
 
         &-number {
             margin-bottom: 0;
@@ -103,6 +104,56 @@
         &__color {
             margin: 0;
             color: $primary-white;
+        }
+    }
+}
+
+.heading-about {
+    text-align: center;
+    h2 {
+        display: inline;
+        font-size: 2.8rem;
+        padding: 1rem 4rem;
+        border-bottom: 1px solid $primary-black;
+    }
+}
+
+.about {
+    background: linear-gradient(
+        to bottom,
+        $primary-color 40%,
+        $primary-color-light 120%
+    );
+    color: $primary-white;
+    margin: 2rem 0;
+    padding: 5rem;
+    font-weight: 400;
+    text-align: center;
+    clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 100%, 50% 90%, 0 100%);
+    p {
+        letter-spacing: 0.5px;
+    }
+
+    &-skill {
+        flex: 1;
+        margin: 4rem 5rem 0;
+
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &-tools {
+        flex: 1;
+        margin: 4rem 5rem 4rem;
+        span {
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        p {
+            margin-top: 2rem;
         }
     }
 }

@@ -5,9 +5,11 @@
     padding: 20rem 0 30rem;
     clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
 
-    &__right {
-        background: linear-gradient(to bottom, $primary-color 40%, $primary-color-light 120%);
+    &__color {
+        background: linear-gradient(
+            to bottom,
+            $primary-color 40%,
+            $primary-color-light 120%
+        );
     }
 }
-
-

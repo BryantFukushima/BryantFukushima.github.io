@@ -5,7 +5,7 @@
     align-items: center;
     height: 55px;
     margin: 2.5rem 5rem;
-    animation: leftToRight .8s ease-in;
+    animation: leftToRight 0.8s ease-in;
     text-decoration: none;
     color: $primary-black;
     @include respond(phone) {
