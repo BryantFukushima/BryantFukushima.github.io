@@ -469,10 +469,10 @@ h3 {
 
 .proj-header {
   color: rgba(75, 75, 75, 0.1);
-  font-size: calc(15vw + 1rem);
+  font-size: calc(10vw + 1rem);
   font-weight: 600;
   transform: rotate(3deg);
-  margin: 10rem auto 5rem;
+  margin: 8rem 0 2rem;
   text-align: center;
 }
 
