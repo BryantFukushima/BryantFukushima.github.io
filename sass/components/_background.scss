@@ -2,8 +2,8 @@
 
 .background {
     height: inherit;
-    padding: 18rem 0 21rem;
-    clip-path: polygon(0 0, 100% 10%, 100% 85%, 0 100%);
+    padding: 20rem 0 30rem;
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
 
     &__right {
         background: linear-gradient(to bottom, $primary-color 40%, $primary-color-light 120%);

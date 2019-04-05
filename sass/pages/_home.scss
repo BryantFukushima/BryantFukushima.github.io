@@ -41,11 +41,11 @@
 }
 
 .proj-header {
-    color: rgba($primary-black, 0.2);
+    color: rgba($primary-black, 0.1);
     font-size: calc(15vw + 1rem);
-    transform: rotate(5deg);
-    text-transform: uppercase;
-    margin: auto;
+    font-weight: 600;
+    transform: rotate(3deg);
+    margin: 10rem auto 5rem;
     text-align: center;
 }
 
@@ -54,15 +54,19 @@
     text-align: center;
     margin-top: -5rem;
     &-project {
-        margin: 8rem 0 10rem;
+        margin-bottom: 10rem;
         color: $primary-black;
+        text-shadow: 1px 1px 3px rgba($primary-grey, .4);
 
-        h3 {
+        &-number {
             margin-bottom: 0;
+            font-size: 20rem;
+            font-weight: 800;
+            line-height: 1.1;
         }
 
-        p:first-of-type {
-            font-size: 1.2rem;
+        h3 {
+            font-size: 2.8rem;
         }
 
         p {
@@ -71,8 +75,8 @@
         }
 
         img {
-            height: 45rem;
-            margin: 5rem 0;
+            width: 50%;
+            margin: 12rem auto;
             box-shadow: 5px 5px 10px rgba($primary-black, 0.2);
         }
 
@@ -95,7 +99,6 @@
         &__color {
             margin: 0;
             color: $primary-white;
-            text-shadow: 1px 1px 5px rgba($primary-black, 0.5);
         }
     }
 }
