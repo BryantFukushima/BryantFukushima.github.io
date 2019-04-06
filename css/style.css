@@ -89,7 +89,11 @@ h1 {
 }
 
 h2 {
-  font-weight: 800;
+  text-align: center;
+  color: rgba(107, 179, 221, 0.25);
+  font-size: calc(10vw + 1rem);
+  font-weight: 600;
+  text-shadow: none;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -204,6 +208,7 @@ h3 {
   transition: all 0.2s;
   position: relative;
   font-size: 1.6rem;
+  font-weight: 300;
 }
 .btn:hover, .btn:focus {
   background-color: #196188;
@@ -220,12 +225,12 @@ h3 {
   box-shadow: inset 0 5px 5px rgba(75, 75, 75, 0.5);
   color: #fff;
 }
-.btn__white, .btn:link, .btn:visited {
+.btn__white, .btn__white:link, .btn__white:visited {
   border: 1px solid #fff;
   color: #fff;
   font-weight: 300;
 }
-.btn__white:hover, .btn__white:focus, .btn:link:hover, .btn:link:focus, .btn:visited:hover, .btn:visited:focus {
+.btn__white:hover, .btn__white:focus, .btn__white:link:hover, .btn__white:link:focus, .btn__white:visited:hover, .btn__white:visited:focus {
   background-color: #fff;
   color: #196188;
 }
@@ -452,7 +457,7 @@ h3 {
 }
 .header-intro {
   color: #fff;
-  padding: 32.5rem 10rem;
+  padding: 27.5rem 10rem;
   width: 50%;
 }
 .header-intro h1 {
@@ -465,20 +470,12 @@ h3 {
   line-height: 1.8;
 }
 
-.heading-project {
-  color: rgba(75, 75, 75, 0.1);
-  font-size: calc(10vw + 1rem);
-  font-weight: 600;
-  transform: rotate(3deg);
-  margin: 4rem 0;
-  text-align: center;
-  text-shadow: none;
-}
-
 .projects {
   color: #fff;
   text-align: center;
-  margin-top: -5rem;
+}
+.projects h2 {
+  margin: 4rem 0;
 }
 .projects-project {
   margin-bottom: 10rem;
@@ -530,9 +527,7 @@ h3 {
 }
 .heading-about h2 {
   display: inline;
-  font-size: 2.8rem;
   padding: 1rem 4rem;
-  border-bottom: 1px solid #4b4b4b;
 }
 
 .about {
@@ -542,8 +537,8 @@ h3 {
 }
 .about-content {
   color: #fff;
-  margin: 4rem 0 2rem;
-  padding: 5rem;
+  margin: 4rem 0;
+  padding: 10rem 0;
   font-weight: 400;
   text-align: center;
 }
@@ -552,7 +547,7 @@ h3 {
 }
 .about-content-skill {
   flex: 1;
-  margin: 4rem 5rem 0;
+  margin: 4rem 7rem 0;
 }
 .about-content-skill h3 {
   font-size: 2rem;
@@ -560,7 +555,7 @@ h3 {
 }
 .about-content-tools {
   flex: 1;
-  margin: 4rem 5rem 4rem;
+  margin: 6rem 7rem 4rem;
 }
 .about-content-tools span {
   font-size: 1.4rem;
@@ -580,41 +575,25 @@ h3 {
   height: 100%;
   z-index: -100;
 }
+.about .line {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 45%;
+  width: 50%;
+  border-right: 1px solid #fff;
+}
 
 .contact {
-  text-transform: uppercase;
-  z-index: 100;
-  background-color: #fff;
-  margin: -4rem auto 4rem;
-  width: 75%;
-  padding: 4rem;
-  border: 1.25px solid #4b4b4b;
-  border-radius: 1rem;
   text-align: center;
-  box-shadow: 3px 3px 5px rgba(25, 97, 136, 0.2);
+  margin: 10rem 0;
 }
-@media only screen and (max-width: 37.5em) {
-  .contact {
-    width: auto;
-    margin: -4rem 4rem 4rem;
-  }
+.contact p {
+  margin-top: 4rem;
 }
-.contact-form {
-  justify-content: center;
-}
-.contact-form p {
-  padding: 0 5rem 2rem;
-  font-size: 1.8rem;
-  align-self: center;
-  text-transform: none;
-}
-@media only screen and (max-width: 37.5em) {
-  .contact-form p {
-    padding: 0 2rem 2rem;
-  }
-}
-.contact-form__button {
-  text-transform: uppercase;
+.contact a {
+  margin-top: 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

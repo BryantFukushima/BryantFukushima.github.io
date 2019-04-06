@@ -17,7 +17,11 @@ h1 {
 }
 
 h2 {
-    font-weight: 800;
+    text-align: center;
+    color: rgba($primary-color-light, 0.25);
+    font-size: calc(10vw + 1rem);
+    font-weight: 600;
+    text-shadow: none;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
