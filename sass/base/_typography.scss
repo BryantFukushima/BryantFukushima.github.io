@@ -2,12 +2,16 @@
 
 body {
     font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.8rem;
     line-height: 1.45;
     letter-spacing: 0.75px;
     color: $primary-black;
     text-shadow: 1px 1px 3px rgba($primary-grey, 0.4);
+
+    @include respond(phone) {
+        font-size: 1.6rem;
+    }
 }
 
 h1 {
@@ -18,7 +22,7 @@ h1 {
 
 h2 {
     text-align: center;
-    color: rgba($primary-color-light, 0.25);
+    color: rgba($primary-black, 0.175);
     font-size: calc(10vw + 1rem);
     font-weight: 600;
     text-shadow: none;

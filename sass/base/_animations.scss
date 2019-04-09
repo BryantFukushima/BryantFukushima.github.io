@@ -16,18 +16,6 @@
     }
 }
 
-@keyframes leftToRightNH {
-    0% {
-        opacity: 0;
-        transform: translateX(-30rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
 @keyframes rightToLeft {
     0% {
         opacity: 0;
@@ -36,18 +24,6 @@
 
     80% {
         transform: translateX(-1rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes rightToLeftNH {
-    0% {
-        opacity: 0;
-        transform: translateX(30rem);
     }
 
     100% {
@@ -90,20 +66,6 @@
     }
 }
 
-.project-text-ani {
-    animation: fadeIn .5s .1s linear forwards;
-}
-.project-img-ani {
-    animation: rightToLeft .3s linear forwards;
-}
-.project-img-ani-left {
-    animation: leftToRight .3s linear forwards;
-}
-
-.about-dev-ani {
-    animation: leftToRightNH .3s linear forwards;
-}
-
-.about-des-ani {
-    animation: rightToLeftNH .3s linear forwards;
+.fadeIn-ani {
+    animation: fadeIn .5s linear forwards;
 }

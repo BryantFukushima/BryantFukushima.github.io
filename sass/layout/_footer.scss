@@ -1,43 +1,36 @@
 // _footer.scss
 
 .footer {
-    text-align: center;
-    padding: 2rem;
-    background-image: linear-gradient(to bottom, $primary-color-light,
-        $primary-color);
-    position: relative;
     height: 12rem;
+    background: lighten($primary-color, 5%);
+    border-top: 4px solid $primary-color-light;
+    box-shadow: 0 3px 4px rgba($primary-color, .5) inset;
     display: flex;
     justify-content: center;
+    align-items: center;
 
-    &-img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 14rem;
-        opacity: .1;
-        z-index: 1;
+    &-logo, &-info {
+        flex: 1;
+        justify-content: center;
+        color: $primary-white;
     }
 
-    &-links {
-        z-index: 100;
-        align-self: flex-end;
-        color: $primary-white;
+    &-info {
+        text-align: center;
+        font-size: 1rem;
 
-        a {
-            color: $primary-white;
-            text-decoration: none;
+        &-links {
+            a {
+                color: $primary-white;
+                text-decoration: none;
+                font-size: 1.6rem;
+                padding: 0 1rem;
+            }
 
-            &:hover {
-                text-decoration: underline;
+            a:not(:last-child) {
+                border-right: 1px solid white;
             }
         }
     }
 
-    &-copy {
-        color: $primary-white;
-        font-size: 1rem;
-        margin-top: .2rem;
-    }
 }

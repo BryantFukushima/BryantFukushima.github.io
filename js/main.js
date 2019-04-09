@@ -1,61 +1,55 @@
-// $(document).ready(function() {
-//     $("a").on("click", function(event) {
-//         if (this.hash !== "" && this.hash !== "#home") {
-//             var hash = this.hash;
-//             $("html, body").animate(
-//                 {
-//                     scrollTop: $(hash).offset().top
-//                 },
-//                 800
-//             );
-//             $(".navbar__check").prop("checked", false);
-//         } else if (this.hash === "#home") {
-//             $("html, body").animate(
-//                 {
-//                     scrollTop: 0
-//                 },
-//                 800
-//             );
-//             $(".navbar__check").prop("checked", false);
-//         }
-//     });
-// });
+$(document).ready(function() {
+    $("a").on("click", function(event) {
+        if (this.hash !== "" && this.hash !== "#Home") {
+            var hash = this.hash;
+            $("html, body").animate(
+                {
+                    scrollTop: $(hash).offset().top
+                },
+                800
+            );
+            $(".navbar__check").prop("checked", false);
+        } else if (this.hash === "#Home") {
+            $("html, body").animate(
+                {
+                    scrollTop: 0
+                },
+                800
+            );
+            $(".navbar__check").prop("checked", false);
+        }
+    });
+});
 
-// $(".navbar__bg").click(function() {
-//     $(".navbar__check").prop("checked", false);
-// });
+$(".navbar__bg").click(function() {
+    $(".navbar__check").prop("checked", false);
+});
 
-// function scrollView($class) {
-//     var docViewTop = $(window).scrollTop();
-//     var docViewBottom = docViewTop + $(window).height();
+function scrollInView($class) {
+    let viewTop = $(window).scrollTop();
+    let viewBottom = viewTop + $(window).height();
 
-//     var elemTop = $class.offset().top;
-//     var elemBottom = elemTop + $class.height();
+    let elemTop = $class.offset().top;
+    let elemBottom = elemTop + $class.height();
 
-//     return elemBottom <= docViewBottom && elemTop >= docViewTop;
-// }
+    return (elemTop >= viewTop && elemTop <= viewBottom) || (elemBottom <= viewBottom && elemBottom >= viewTop);
 
-// $(window).scroll(function() {
-//     if (scrollView($("#pure-text"))) {
-//         $("#pure-text").addClass("project-text-ani");
-//         $("#pure-img").addClass("project-img-ani");
-//     }
-//     if (scrollView($("#surf-text"))) {
-//         $("#surf-text").addClass("project-text-ani");
-//         $("#surf-img").addClass("project-img-ani-left");
-//     }
-//     if (scrollView($("#gif-text"))) {
-//         $("#gif-text").addClass("project-text-ani");
-//         $("#gif-img").addClass("project-img-ani");
-//     }
-//     if (scrollView($("#apex-text"))) {
-//         $("#apex-text").addClass("project-text-ani");
-//         $("#apex-img").addClass("project-img-ani");
-//     }
-//     if (scrollView($("#about-dev"))) {
-//         $("#about-dev").addClass("about-dev-ani");
-//     }
-//     if (scrollView($("#about-des"))) {
-//         $("#about-des").addClass("about-des-ani");
-//     }
-// });
+}
+
+$(window).scroll(function() {
+    switch(true) {
+        case scrollInView($('#pure')) : 
+            $('#pure').addClass("fadeIn-ani");
+            break;
+        case scrollInView($('#apex')) : 
+            $('#apex').addClass("fadeIn-ani");
+            break;
+        case scrollInView($('#surfscraper')) : 
+            $('#surfscraper').addClass("fadeIn-ani");
+            break;
+        case scrollInView($('#giftastic')) : 
+            $('#giftastic').addClass("fadeIn-ani");
+            break;
+
+    }
+})
