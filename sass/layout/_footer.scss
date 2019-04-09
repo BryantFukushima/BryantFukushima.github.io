@@ -4,12 +4,13 @@
     height: 12rem;
     background: lighten($primary-color, 5%);
     border-top: 4px solid $primary-color-light;
-    box-shadow: 0 3px 4px rgba($primary-color, .5) inset;
+    box-shadow: 0 3px 4px rgba($primary-color, 0.5) inset;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    &-logo, &-info {
+    &-logo,
+    &-info {
         flex: 1;
         justify-content: center;
         color: $primary-white;
@@ -33,4 +34,9 @@
         }
     }
 
+    @include respond(phone) {
+        &-logo {
+            display: none;
+        }
+    }
 }

@@ -8,10 +8,6 @@ body {
     letter-spacing: 0.75px;
     color: $primary-black;
     text-shadow: 1px 1px 3px rgba($primary-grey, 0.4);
-
-    @include respond(phone) {
-        font-size: 1.6rem;
-    }
 }
 
 h1 {

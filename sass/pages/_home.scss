@@ -88,10 +88,16 @@
 
     &-content {
         color: $primary-white;
-        margin: 4rem 0;
+        margin: 5rem 0;
         padding: 10rem 0;
         font-weight: 400;
         text-align: center;
+        display: flex;
+
+        @include respond(tablet) {
+            flex-direction: column;
+            padding: 20rem 0;
+        }
 
         p {
             letter-spacing: 0.5px;
@@ -100,15 +106,19 @@
         &-skill {
             flex: 1;
             margin: 4rem 7rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
             h3 {
                 font-size: 2rem;
                 margin-bottom: 4rem;
+                @include respond(tablet) {
+                }
             }
         }
 
         &-tools {
-            flex: 1;
             margin: 6rem 7rem 4rem;
             span {
                 font-size: 1.4rem;
@@ -142,12 +152,20 @@
         height: 45%;
         width: 50%;
         border-right: 1px solid $primary-white;
+        @include respond(tablet) {
+            left: 50%;
+            transform: translate(-50%);
+            height: 0;
+            width: 75%;
+            border-right: none;
+            border-bottom: 1px solid $primary-white;
+        }
     }
 }
 
 .contact {
     text-align: center;
-    padding: 0 0 10rem;
+    padding: 0 5rem 10rem;
 
     p {
         margin-top: 4rem;
@@ -156,4 +174,5 @@
     a {
         margin-top: 4rem;
     }
+
 }

@@ -32,24 +32,22 @@ function scrollInView($class) {
     let elemTop = $class.offset().top;
     let elemBottom = elemTop + $class.height();
 
-    return (elemTop >= viewTop && elemTop <= viewBottom) || (elemBottom <= viewBottom && elemBottom >= viewTop);
-
+    return elemTop >= viewTop && elemTop <= viewBottom;
 }
 
 $(window).scroll(function() {
-    switch(true) {
-        case scrollInView($('#pure')) : 
-            $('#pure').addClass("fadeIn-ani");
+    switch (true) {
+        case scrollInView($("#pure")):
+            $("#pure").addClass("fadeIn-ani");
             break;
-        case scrollInView($('#apex')) : 
-            $('#apex').addClass("fadeIn-ani");
+        case scrollInView($("#apex")):
+            $("#apex").addClass("fadeIn-ani");
             break;
-        case scrollInView($('#surfscraper')) : 
-            $('#surfscraper').addClass("fadeIn-ani");
+        case scrollInView($("#surfscraper")):
+            $("#surfscraper").addClass("fadeIn-ani");
             break;
-        case scrollInView($('#giftastic')) : 
-            $('#giftastic').addClass("fadeIn-ani");
+        case scrollInView($("#giftastic")):
+            $("#giftastic").addClass("fadeIn-ani");
             break;
-
     }
-})
+});
